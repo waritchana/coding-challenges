@@ -5,37 +5,37 @@ def romanToInt(s: str) -> int:
         if s[index] == 'I':
             result += 1
             index -= 1
-        elif s[index] == 'V' and s[index-1] == 'I':
+        elif s[index] == 'V' and s[index-1] == 'I' and index-1 >= 0:
             result += 4
             index -= 2
         elif s[index] == 'V':
             result += 5
             index -= 1
-        elif s[index] == 'X' and s[index-1] == 'I':
+        elif s[index] == 'X' and s[index-1] == 'I' and index-1 >= 0:
             result += 9
             index -= 2
         elif s[index] == 'X':
             result += 10
             index -= 1
-        elif s[index] == 'L' and s[index-1] == 'X':
+        elif s[index] == 'L' and s[index-1] == 'X' and index-1 >= 0:
             result += 40
             index -= 2
         elif s[index] == 'L':
             result += 50
             index -= 1
-        elif s[index] == 'C' and s[index-1] == 'X':
+        elif s[index] == 'C' and s[index-1] == 'X' and index-1 >= 0:
             result += 90
             index -= 2
         elif s[index] == 'C':
             result += 100
             index -= 1
-        elif s[index] == 'D' and s[index-1] == 'C':
+        elif s[index] == 'D' and s[index-1] == 'C' and index-1 >= 0:
             result += 400
             index -= 2
         elif s[index] == 'D':
             result += 500
             index -= 1
-        elif s[index] == 'M' and s[index-1] == 'C':
+        elif s[index] == 'M' and s[index-1] == 'C' and index-1 >= 0:
             result += 900
             index -= 2
         elif s[index] == 'M':
@@ -43,9 +43,13 @@ def romanToInt(s: str) -> int:
             index -= 1
     return result
 
-result = romanToInt('III')
+result = romanToInt('IV')
 print("Result is:", result)
-result = romanToInt('LVIII')
-print("Result is:", result)
-result = romanToInt('MCMXCIV')
-print("Result is:", result)
+#result = romanToInt('III')
+#print("Result is:", result)
+#result = romanToInt('LVIII')
+#print("Result is:", result)
+#result = romanToInt('MCMXCIV')
+#print("Result is:", result)
+#result = romanToInt('MMMCDXC')
+#print("Result is:", result)
