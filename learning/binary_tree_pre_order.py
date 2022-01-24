@@ -11,17 +11,9 @@ class Solution:
         # Root first -> traverse to left subtree -> traverse to right subtree
         result = []
         if root:
-            stack = [root]
-        else:
-            stack = []
-        while len(stack) >= 1:
-            current_root = stack.pop()
-            result.append(current_root.val)
-            # Add left node to the stack last so it gets pop first
-            if current_root.right:
-                stack.append(current_root.right)
-            if current_root.left:
-                stack.append(current_root.left)
+            result.append(root.val)
+            result.extend(self.preorderTraversal(root.left))
+            result.extend(self.preorderTraversal(root.right))
         return result
 
 
