@@ -31,7 +31,7 @@ class MyCircularQueue:
         # self.head points to the index to be dequeued
         # do -1 to get the actual last index
         if not self.isEmpty():
-            return self.queue[self.head-1]
+            return self.queue[self.head]
         return -1
 
     def Rear(self) -> int:
@@ -49,6 +49,8 @@ class MyCircularQueue:
 
 
 # Your MyCircularQueue object will be instantiated and called as such:
+"""
+# Case#1
 obj = MyCircularQueue(3)
 param_1 = obj.enQueue(1)
 param_2 = obj.enQueue(2)
@@ -62,6 +64,24 @@ param_9 = obj.Rear()
 print(
     ["null", param_1, param_2, param_3, param_4, param_5,
     param_6, param_7, param_8, param_9]
+)
+"""
+# Case#2
+obj = MyCircularQueue(3)
+param_1 = obj.enQueue(2)
+param_2 = obj.Rear()
+param_3 = obj.Front()
+param_4 = obj.deQueue()
+param_5 = obj.Front()
+param_6 = obj.deQueue()
+param_7 = obj.Front()
+param_8 = obj.enQueue(4)
+param_9 = obj.enQueue(2)
+param_10 = obj.enQueue(2)
+param_11 = obj.enQueue(3)
+print(
+    ["null", param_1, param_2, param_3, param_4, param_5,
+    param_6, param_7, param_8, param_9, param_10, param_11]
 )
 
 # param_1 = obj.enQueue(value)
