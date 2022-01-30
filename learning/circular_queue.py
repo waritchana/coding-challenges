@@ -21,7 +21,7 @@ class MyCircularQueue:
             return False
         else:
             self.queue[self.head] = ''
-            if self.head+1 == self.k:
+            if self.head == self.k-1:
                 self.head = 0
             else:
                 self.head += 1
