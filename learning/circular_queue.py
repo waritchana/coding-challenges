@@ -29,7 +29,6 @@ class MyCircularQueue:
 
     def Front(self) -> int:
         # self.head points to the index to be dequeued
-        # do -1 to get the actual last index
         if not self.isEmpty():
             return self.queue[self.head]
         return -1
