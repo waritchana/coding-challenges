@@ -2,6 +2,8 @@ from typing import List
 
 
 def plusOne(digits: List[int]) -> List[int]:
+    """
+    # Attempt 1
     if digits[-1] < 9:
         digits[-1] = digits[-1]+1
         return digits
@@ -21,10 +23,26 @@ def plusOne(digits: List[int]) -> List[int]:
                 digits[i] = 0
                 digits.insert(0, 1)
         return digits
+    """
+    # Attempt 2
+    for i in range(len(digits)-1, -1, -1):
+        if digits[i] < 9:
+            digits[i] += 1
+            return digits
+        elif digits[i] == 9:
+            digits[i] = 0
+    # The case where all numbers are 9 -> 10, add 1 in the front
+    if digits[0] == 0:
+        digits.insert(0, 1)
+        return digits
 
 
 digits = [1,2,3] # Expect [1, 2, 4]
+output_digits = plusOne(digits)
+print("Output is", output_digits)
 digits = [4,3,2,1] # Expect [4,3,2,2]
+output_digits = plusOne(digits)
+print("Output is", output_digits)
 digits = [9, 9] # Expect [1, 0, 0]
 output_digits = plusOne(digits)
 print("Output is", output_digits)
