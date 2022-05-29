@@ -15,7 +15,7 @@ class Solution:
             return head
         # Reach base case where head = 4 and head.next = 5
         # reversed_list is 5
-        reversed_list = reverseList(head.next)
+        reversed_list = self.reverseList(head.next)
         # 4 -> 5 -> 4 cyclic linked list
         head.next.next = head
         # 5 -> 4 -> None
