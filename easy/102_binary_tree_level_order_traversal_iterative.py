@@ -12,22 +12,24 @@ class TreeNode:
 
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        if not root:
+        if root is None:
             return []
+
         queue = deque([root])
         levels = []
+
         while queue:
-            # All nodes in current level
-            nodes = len(queue)
             # Empty list to contains nodes of each level
             level = []
-            for i in range(nodes):
+            # How many nodes in current level
+            count_nodes = len(queue)
+            for i in range(count_nodes):
                 node = queue.popleft()
                 level.append(node.val)
                 # Child nodes of current levels to be in the next level queue
-                if node.left:
+                if node.left is not None:
                     queue.append(node.left)
-                if node.right:
+                if node.right is not None:
                     queue.append(node.right)
             levels.append(level)
         return levels
