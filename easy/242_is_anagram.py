@@ -1,6 +1,6 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        # O(n) from length of s + t
+        # O(n) from length of s + t -> 2n -> n
         hashmap = {}
         if len(s) != len(t):
             return False
