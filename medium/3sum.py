@@ -22,6 +22,15 @@ class Solution:
                 else:
                     result.append([nums[i], nums[l], nums[r]])
 
+                    """
+                    * BOTH WAYS ARE CORRECT *
+                    # Move on to next pointers, move both since each number can
+                    # correspond to only one other number which was added.
+                    # Keeps moving if the l number is the same
+                    # as previous l, since it had been worked on.
+                    l += 1
+                    r -= 1
+                    """
                     # Move one pointer (l) after the three numbers
                     # were found. Keeps moving if the l number is the same
                     # as previous l, since it had been worked on.
