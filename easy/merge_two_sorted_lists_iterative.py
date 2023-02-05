@@ -10,8 +10,8 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-        final_head = ListNode(-1)
-        pointer = final_head
+        head = ListNode(-1)
+        pointer = head
 
         # Loop until either list is empty
         while list1 or list2:
@@ -34,7 +34,7 @@ class Solution:
 
         # The node has already been assigned the next node
         # to when pointer has pointer.next for the first time
-        return final_head.next
+        return head.next
 
 Solution().mergeTwoLists([1,2,4], [1,3,4])
 
