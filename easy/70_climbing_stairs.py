@@ -18,7 +18,7 @@ class Solution:
             return self.decisionTree(0, n)
 """
 
-
+"""
 # Recursion with Memoization
 class Solution:
     def decisionTree(self, i, n, memo_steps: int) -> int:
@@ -43,7 +43,17 @@ class Solution:
         else:
             memo_steps = {}
             return self.decisionTree(0, n, memo_steps)
-
+"""
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        # Use dynamic programming to save how many possible ways
+        # from the result to furthest
+        index_one, index_two = 1, 1
+        for i in range(n-1):
+            temp = index_one
+            index_one = index_one + index_two
+            index_two = temp
+        return index_one
 
 n = 5
 result = Solution().climbStairs(n)
