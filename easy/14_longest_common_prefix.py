@@ -27,7 +27,7 @@ def longestCommonPrefix(strs: List[str]) -> str:
     result = ''
     # Return empty string if any element in strs is empty
     # or strs is empty
-    if "" in strs or strs == []:
+    if '' in strs or strs == []:
         return result
 
     # Only loop upto the shortest string's length
