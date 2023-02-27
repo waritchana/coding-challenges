@@ -18,13 +18,13 @@ class Solution:
         Time complexity: O(n)
         Space complexity: O(n) as we store numbers in hash table
         """
-        hashmap = {}
+        number_indexes = {}
         for i in range(len(nums)):
             remain = target - nums[i]
-            if remain not in hashmap.keys():
-                hashmap[nums[i]] = i
+            if remain in number_indexes.keys():
+                return [number_indexes[remain], i]
             else:
-                return [hashmap[remain], i]
+                number_indexes[nums[i]] = i
 
 
 nums = [2,7,11,15]
