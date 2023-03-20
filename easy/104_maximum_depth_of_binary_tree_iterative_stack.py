@@ -7,16 +7,14 @@
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         # Iterative - stack
-        height = 0
-        stack = []
-        if root is not None:
-            # Stack contains tuples of current pointer (root) and its height
-            stack.append((root, 1))
-        while stack != []:
+        max_height = 0
+        # Initiate stack with the first node and its height
+        stack = [(root, 1)]
+        while stack:
             root, root_height = stack.pop()
             # Skip root.left and root.right added that is actually None
-            if root is not None:
-                height = max(root_height, height)
+            if root:
+                max_height = max(root_height, max_height)
                 stack.append((root.left, root_height+1))
                 stack.append((root.right, root_height+1))
-        return height
+        return max_height
