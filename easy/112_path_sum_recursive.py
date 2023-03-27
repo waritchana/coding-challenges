@@ -17,7 +17,7 @@ class Solution:
 
         # Minus until reaching leaf node
         targetSum -= root.val
-        # Has reach left node
+        # Has reach leaf node
         if not root.left and not root.right:
             if targetSum == 0:
                 return True
