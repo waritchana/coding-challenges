@@ -26,14 +26,14 @@ def plusOne(digits: List[int]) -> List[int]:
     """
     # Attempt 2
     for i in range(len(digits)-1, -1, -1):
-    if digits[i] < 9:
-        digits[i] += 1
-        # Finish adding if value is not 9
-        return digits
-    elif digits[i] == 9:
-        # Flip to 0 then go to the previous index to add one
-        digits[i] = 0
-    # For the case where string did not return because all digits are 9
+        if digits[i] < 9:
+            digits[i] += 1
+            # Finish adding if value is not 9
+            return digits
+        elif digits[i] == 9:
+            # Flip to 0 then go to the previous index to add one
+            digits[i] = 0
+        # For the case where string did not return because all digits are 9
     return [1] + digits
 
 
