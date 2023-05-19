@@ -12,12 +12,11 @@ class TreeNode:
 
 class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
-        if root is not None:
+        if not root:
             return False
-
-        # Minus until reaching leaf node
+        # Minus sum with current node's value until reaching leaf node
         targetSum -= root.val
-        # Has reach leaf node
+        # Has reach left node
         if not root.left and not root.right:
             if targetSum == 0:
                 return True
