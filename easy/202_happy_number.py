@@ -20,4 +20,4 @@ class Solution:
 
 n = 19
 #n = 2
-Solution().isHappy(n)
+print(Solution().isHappy(n))
