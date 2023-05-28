@@ -26,5 +26,15 @@ class Solution:
         head.next = self.mergeTwoLists(list1, list2)
         return head
 
+        """
+        Recursively return head as head.next from the base case
+        head = 1, list1 = 2->4, list2 = 1->3->4, head.next = 1
+        head = 1, list1 = 2->4, list2 = 3->4,    head.next = 2
+        head = 2, list1 = 4,    list2 = 3->4,    head.next = 3
+        head = 3, list1 = 4,    list2 = 4,       head.next = 4
+        head = 4, list1 = None, list2 = 4,       head.next = 4
+        head = 4,
+        """
+
 
 Solution().mergeTwoLists([1,2,4], [1,3,4])
