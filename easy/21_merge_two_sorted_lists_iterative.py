@@ -10,11 +10,12 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        # To reserve to be the head of the final result
         head = ListNode(-1)
+        # Moves as merging the list
         pointer = head
-
-        # Loop until either list is empty
-        while list1 or list2:
+        # Work on each nodes until either list is empty
+        while list1 and list2:
             if list1.val <= list2.val:
                 # Sorted list points to a list with least value
                 pointer.next = list1
@@ -23,15 +24,12 @@ class Solution:
             else:
                 pointer.next = list2
                 list2 = list2.next
-            # Update current pointer to the added node
             pointer = pointer.next
-
-        # Add leftover list (if available) to sorted list
+        # Either list is done, add remaining
         if list1:
             pointer.next = list1
-        else:
+        elif list2:
             pointer.next = list2
-
         # The node has already been assigned the next node
         # to when pointer has pointer.next for the first time
         return head.next
