@@ -1,3 +1,4 @@
+from collections import deque
 from typing import List
 from typing import Optional
 
@@ -33,3 +34,27 @@ class Solution:
                     queue.append(node.right)
             levels.append(level)
         return levels
+
+
+root = TreeNode(
+    val=3,
+    left=TreeNode(
+        val=9,
+        left=None,
+        right=None
+    ),
+    right=TreeNode(
+        val=20,
+        left=TreeNode(
+            val=15,
+            left=None,
+            right=None
+        ),
+        right=TreeNode(
+            val=7,
+            left=None,
+            right=None
+        )
+    )
+)
+print(Solution().levelOrder(root))

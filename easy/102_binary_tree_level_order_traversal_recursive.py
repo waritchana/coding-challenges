@@ -27,3 +27,27 @@ class Solution:
         if not root:
             return []
         return self.setupLevels(root, 0, [])
+
+
+root = TreeNode(
+    val=3,
+    left=TreeNode(
+        val=9,
+        left=None,
+        right=None
+    ),
+    right=TreeNode(
+        val=20,
+        left=TreeNode(
+            val=15,
+            left=None,
+            right=None
+        ),
+        right=TreeNode(
+            val=7,
+            left=None,
+            right=None
+        )
+    )
+)
+print(Solution().levelOrder(root))
