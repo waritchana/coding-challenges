@@ -24,3 +24,57 @@ class Solution:
 
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
         return self.isMirror(root.left, root.right)
+
+"""
+root = TreeNode(
+    val=1,
+    left=TreeNode(
+        val=2,
+        left=TreeNode(
+            val=3,
+            left=None,
+            right=None
+        ),
+        right=TreeNode(
+            val=4,
+            left=None,
+            right=None
+        )
+    ),
+    right=TreeNode(
+        val=2,
+        left=TreeNode(
+            val=4,
+            left=None,
+            right=None
+        ),
+        right=TreeNode(
+            val=3,
+            left=None,
+            right=None
+        )
+    )
+)
+"""
+root = TreeNode(
+    val=1,
+    left=TreeNode(
+        val=2,
+        left=None,
+        right=TreeNode(
+            val=3,
+            left=None,
+            right=None
+        )
+    ),
+    right=TreeNode(
+        val=2,
+        left=None,
+        right=TreeNode(
+            val=3,
+            left=None,
+            right=None
+        )
+    )
+)
+print(Solution().isSymmetric(root))
