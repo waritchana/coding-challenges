@@ -24,3 +24,60 @@ class Solution:
                 return False
         return self.hasPathSum(root.left, targetSum) or\
             self.hasPathSum(root.right, targetSum)
+
+
+"""
+root = TreeNode(
+    val=5,
+    left=TreeNode(
+        val=4,
+        left=TreeNode(
+            val=11,
+            left=TreeNode(
+                val=7,
+                left=None,
+                right=None
+            ),
+            right=TreeNode(
+                val=2,
+                left=None,
+                right=None
+            )
+        ),
+        right=None
+    ),
+    right=TreeNode(
+        val=8,
+        left=TreeNode(
+            val=13,
+            left=None,
+            right=None
+        ),
+        right=TreeNode(
+            val=4,
+            left=None,
+            right=TreeNode(
+                val=1,
+                left=None,
+                right=None
+            )
+        )
+    )
+)
+target_sum = 22
+"""
+root = TreeNode(
+    val=1,
+    left=TreeNode(
+        val=2,
+        left=None,
+        right=None
+    ),
+    right=TreeNode(
+        val=3,
+        left=None,
+        right=None
+    )
+)
+target_sum = 5
+print(Solution().hasPathSum(root, target_sum))
