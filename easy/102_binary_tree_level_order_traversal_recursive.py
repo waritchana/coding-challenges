@@ -12,6 +12,8 @@ class TreeNode:
 
 class Solution:
     def setupLevels (self, root, level, levels):
+        if not root:
+            return []
         # Initiate new level
         if len(levels) == level:
             levels.append([])
@@ -24,8 +26,6 @@ class Solution:
         return levels
 
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        if not root:
-            return []
         return self.setupLevels(root, 0, [])
 
 
