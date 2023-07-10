@@ -19,5 +19,8 @@ def generate(numRows: int) -> List[List[int]]:
     return result
 
 
-print(generate(5))
 print(generate(1))
+print(generate(2))
+print(generate(3))
+print(generate(4))
+print(generate(5))

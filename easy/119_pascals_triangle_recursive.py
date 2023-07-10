@@ -22,7 +22,7 @@ def getRow(numRows: int) -> List[List[int]]:
     elif numRows == 1:
         return [1, 1]
     else:
-        prev_row = self.getRow(numRows-1)
+        prev_row = getRow(numRows-1)
         row = [1]
         for i in range(1, numRows):
             row.append(prev_row[i-1]+prev_row[i])
@@ -30,5 +30,8 @@ def getRow(numRows: int) -> List[List[int]]:
     return row
 
 
-print(getRow(3))
 print(getRow(1))
+print(getRow(2))
+print(getRow(3))
+print(getRow(4))
+print(getRow(5))
