@@ -29,3 +29,26 @@ class Solution:
                 if current_node.left is not None:
                     stack.append(current_node.left)
         return output_tree
+
+
+root = TreeNode(
+    val=1,
+    left=None,
+    right=TreeNode(
+        val=2,
+        left=TreeNode(
+            val=3,
+            left=None,
+            right=None
+        ),
+        right=None
+    )
+)
+"""
+root = TreeNode(
+    val=1,
+    left=None,
+    right=None
+)
+"""
+print(Solution().preorderTraversal(root))
