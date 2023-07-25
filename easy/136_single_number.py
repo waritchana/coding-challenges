@@ -24,7 +24,7 @@ class Solution:
         return number_to_xor
 
 
-nums = [2,2,1] # 1
-#nums = [4,1,2,1,2] # 4
+#nums = [2,2,1] # 1
+nums = [4,1,2,1,2] # 4
 #nums = [1] # 1
-Solution().singleNumber(nums)
+print(Solution().singleNumber(nums))
