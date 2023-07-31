@@ -30,3 +30,28 @@ class Solution:
             # next round if right is None
             root = root.right
         return output_tree
+
+
+# root = [1,null,2,3]
+root = TreeNode(
+    val=1,
+    left=None,
+    right=TreeNode(
+        val=2,
+        left=TreeNode(
+            val=3,
+            left=None,
+            right=None
+        ),
+        right=None
+    )
+)
+"""
+root = None
+root = TreeNode(
+    val=1,
+    left=None,
+    right=None
+)
+"""
+print(Solution().inorderTraversal(root))
