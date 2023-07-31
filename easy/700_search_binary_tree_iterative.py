@@ -18,3 +18,30 @@ class Solution:
             else:
                 root = root.right
         return root
+
+
+root = TreeNode(
+    val=4,
+    left=TreeNode(
+        val=2,
+        left=TreeNode(
+            val=1,
+            left=None,
+            right=None
+        ),
+        right=TreeNode(
+            val=3,
+            left=None,
+            right=None
+        )
+    ),
+    right=TreeNode(
+        val=7,
+        left=None,
+        right=None
+    )
+)
+#search_val = 5
+search_val = 2
+output = Solution().searchBST(root, search_val)
+print(output.val)
