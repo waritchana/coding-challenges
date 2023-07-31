@@ -11,7 +11,7 @@ def reverseString(s: List[str]) -> None:
         tmp = s[i]
         s[i] = s[len(s)-1-i]
         s[len(s)-1-i] = tmp
-    print(s)
+    print(f"New string is {s}")
 
 
 s = ["h","e","l","l","o"]

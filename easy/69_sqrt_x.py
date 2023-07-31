@@ -19,5 +19,5 @@ class Solution:
         return right
 
 
-Solution().mySqrt(4) # return 2
-#Solution().mySqrt(8) # return 2 rounded down from 2.82842..
+print(Solution().mySqrt(4)) # return 2
+#print(Solution().mySqrt(8)) # return 2 rounded down from 2.82842..

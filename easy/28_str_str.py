@@ -16,3 +16,4 @@ def strStr(haystack: str, needle: str) -> int:
 haystack = "hello"
 needle = "ll"
 result = strStr(haystack, needle)
+print(f"Found at index {result}")

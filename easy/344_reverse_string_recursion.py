@@ -18,7 +18,7 @@ def reverseString(s: List[str]) -> None:
     """
     # Recursive way
     s = helper(0, len(s)-1, s)
-    print(s)
+    print(f"New string is {s}")
 
 
 s = ["h","e","l","l","o"]

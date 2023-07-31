@@ -28,4 +28,4 @@ pattern = "abba"
 s = "dog cat cat dog" #True
 #pattern = "abba", s = "dog cat cat fish" # False
 #pattern = "aaaa", s = "dog cat cat dog" # False
-Solution().wordPattern(pattern, s)
+print(Solution().wordPattern(pattern, s))

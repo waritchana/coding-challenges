@@ -33,4 +33,4 @@ class Solution:
 a = "1010"
 b = "1011"
 # Expected "10101"
-Solution().addBinary(a, b)
+print(Solution().addBinary(a, b))
