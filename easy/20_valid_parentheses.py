@@ -1,5 +1,5 @@
 class Solution:
-    def isValid(self, s: str) -> bool:
+    def isValidParentheses(self, s: str) -> bool:
         stack = []
         brakets_table = {
             ")": "(",
@@ -22,11 +22,11 @@ class Solution:
             return True
 
 
-result = isValidParentheses("()")
+result = Solution().isValidParentheses("()")
 print(result)
-result = isValidParentheses("}(")
+result = Solution().isValidParentheses("}(")
 print(result)
-result = isValidParentheses("()[]{}")
+result = Solution().isValidParentheses("()[]{}")
 print(result)
-result = isValidParentheses("(([]{}))")
+result = Solution().isValidParentheses("(([]{}))")
 print(result)
