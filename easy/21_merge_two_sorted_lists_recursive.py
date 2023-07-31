@@ -37,4 +37,30 @@ class Solution:
         """
 
 
-Solution().mergeTwoLists([1,2,4], [1,3,4])
+list1 = ListNode(
+    val=1,
+    next=ListNode(
+        val=2,
+        next=ListNode(
+            val=4,
+            next=None
+        )
+    )
+)
+list2 = ListNode(
+    val=1,
+    next=ListNode(
+        val=3,
+        next=ListNode(
+            val=4,
+            next=None
+        )
+    )
+)
+head = Solution().mergeTwoLists(list1, list2)
+print(head.val)
+print(head.next.val)
+print(head.next.next.val)
+print(head.next.next.next.val)
+print(head.next.next.next.next.val)
+print(head.next.next.next.next.next.val)
