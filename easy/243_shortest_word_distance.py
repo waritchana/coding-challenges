@@ -30,4 +30,4 @@ word2 = "practice"
 word1 = "makes"
 word2 = "coding"
 """
-Solution().shortestDistance(wordsDict, word1, word2)
+print(Solution().shortestDistance(wordsDict, word1, word2))
